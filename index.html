@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Analog Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="settings-panel">
+        <button id="toggle-mode">Toggle Mode</button>
+        <button id="change-face">Change Clock Face</button>
+        <input type="color" id="color-picker" title="Pick Clock Color">
+        <select id="timezone-select">
+            <!-- Options for different timezones (populated by JavaScript) -->
+        </select>
+    </div>
+    <div class="clock-container">
+        <div class="clock">
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+            <div class="center-dot"></div>
+        </div>
+        <div class="digital-time-container">
+            <div class="digital-time">12:00:00</div>
+            <div class="date">July 11, 2024</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
