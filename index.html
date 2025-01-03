@@ -1,32 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Analog Clock</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="settings-panel">
-        <button id="toggle-mode">Toggle Mode</button>
-        <button id="change-face">Change Clock Face</button>
-        <input type="color" id="color-picker" title="Pick Clock Color">
-        <select id="timezone-select">
-            <!-- Options for different timezones (populated by JavaScript) -->
-        </select>
-    </div>
-    <div class="clock-container">
-        <div class="clock">
-            <div class="hand hour-hand"></div>
-            <div class="hand minute-hand"></div>
-            <div class="hand second-hand"></div>
-            <div class="center-dot"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Clock Ui</title>
+  </head>
+  <body>
+    <section class="clock container">
+      <div class="clock__container grid">
+        <div class="clock__content grid">
+          <div class="clock__circle">
+            <span class="clock__twelve"></span>
+            <span class="clock__three"></span>
+            <span class="clock__six"></span>
+            <span class="clock__nine"></span>
+
+            <div class="clock__rounder"></div>
+            <div class="clock__hour" id="clock-hour"></div>
+            <div class="clock__minutes" id="clock-minutes"></div>
+            <div class="clock__seconds" id="clock-seconds"></div>
+
+            <div class="clock__theme">
+              <i class="bx bxs-moon" id="theme-button"></i>
+            </div>
+          </div>
+
+          <div>
+            <div class="clock__text">
+              <div class="clock__text-hour" id="text-hour"></div>
+              <div class="clock__text-minutes" id="text-minutes"></div>
+              <div class="clock__text-ampm" id="text-ampm"></div>
+            </div>
+
+            <div class="clock__date">
+              <!-- <span id="date-day-week"></span> -->
+              <span id="date-day"></span>
+              <span id="date-month"></span>
+              <span id="date-year"></span>
+            </div>
+          </div>
         </div>
-        <div class="digital-time-container">
-            <div class="digital-time">12:00:00</div>
-            <div class="date">July 11, 2024</div>
-        </div>
-    </div>
+
+        <a
+          href="https://github.com/pragsssrv"
+          target="_blank"
+          class="clock__logo"
+        >
+          github.com/pragsssrv
+        </a>
+      </div>
+    </section>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
